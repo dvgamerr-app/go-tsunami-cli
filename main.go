@@ -1,4 +1,4 @@
-package tsunami
+package main
 
 import (
 	"encoding/csv"
@@ -6,6 +6,8 @@ import (
 	"io"
 	"log"
 	"os"
+
+	"github.com/alexflint/go-arg"
 )
 
 func readCSV(filename string) {
@@ -42,6 +44,13 @@ func readCSV(filename string) {
 }
 
 func main() {
+	var args struct {
+		Output string   `arg:"-o"`
+		Input  []string `arg:"positional"`
+	}
+	arg.MustParse(&args)
+	fmt.Println("Input:", args.Input)
+	fmt.Println("Output:", args.Output)
 	// open file
-	readCSV("in.product.csv")
+	// readCSV("in.product.csv")
 }

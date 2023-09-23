@@ -1,4 +1,4 @@
-package tsunami
+package main
 
 import "testing"
 
