@@ -6,9 +6,16 @@ import (
 	"io"
 	"log"
 	"os"
+	"regexp"
 
 	"github.com/alexflint/go-arg"
 )
+
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
 
 func readCSV(filename string) {
 	f, err := os.Open(filename)
@@ -28,9 +35,7 @@ func readCSV(filename string) {
 		if err == io.EOF {
 			break
 		}
-		if err != nil {
-			log.Fatal(err)
-		}
+		check(err)
 		// do something with read line
 		// fmt.Printf("%+v\n", rec)
 		if line == 0 {
@@ -43,6 +48,11 @@ func readCSV(filename string) {
 	fmt.Printf("- Read %d|%s [Complate]\n", line, filename)
 }
 
+type OutputType struct {
+	Input  string
+	Output string
+}
+
 func main() {
 	var args struct {
 		Output string   `arg:"-o"`
@@ -51,6 +61,26 @@ func main() {
 	arg.MustParse(&args)
 	fmt.Println("Input:", args.Input)
 	fmt.Println("Output:", args.Output)
+
+	dat, err := os.ReadFile("./example/basic.tsu")
+	check(err)
+	fmt.Println("------")
+
+	rOut := regexp.MustCompile(`output (.*?)\s`)
+	rSt, _ := regexp.Compile(`\W---\W`)
+
+	mStntax := rSt.FindAllStringSubmatchIndex(string(dat), -1)
+	if len(mStntax) == 0 {
+		panic("Syntax error")
+	}
+	header := dat[0 : mStntax[0][0]+1]
+	payload := dat[mStntax[0][1]:]
+
+	outputType := rOut.FindStringSubmatch(string(header))
+	fmt.Printf("Header:\n%s\n", header)
+	fmt.Printf("Payload: %s\n", payload)
+	fmt.Printf("Output: %s\n", outputType[1])
+
 	// open file
 	// readCSV("in.product.csv")
 }
