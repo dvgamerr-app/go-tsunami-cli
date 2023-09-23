@@ -61,25 +61,32 @@ func main() {
 	arg.MustParse(&args)
 	fmt.Println("Input:", args.Input)
 	fmt.Println("Output:", args.Output)
+	var (
+		header  []byte
+		payload []byte
+		output  []byte
+	)
 
-	dat, err := os.ReadFile("./example/basic.tsu")
+	payload, err := os.ReadFile("./example/basic.tsu")
 	check(err)
 	fmt.Println("------")
 
 	rOut := regexp.MustCompile(`output (.*?)\s`)
-	rSt, _ := regexp.Compile(`\W---\W`)
+	rSt, _ := regexp.Compile(`---\W`)
 
-	mStntax := rSt.FindAllStringSubmatchIndex(string(dat), -1)
-	if len(mStntax) == 0 {
-		panic("Syntax error")
+	mStntax := rSt.FindAllStringSubmatchIndex(string(payload), -1)
+	if len(mStntax) > 0 {
+		header = payload[0:mStntax[0][0]]
+		payload = payload[mStntax[0][1]:]
+
+		outputType := rOut.FindAllStringSubmatchIndex(string(header), -1)
+		output = header[outputType[0][2]:outputType[0][3]]
+		header = header[outputType[0][1]:]
 	}
-	header := dat[0 : mStntax[0][0]+1]
-	payload := dat[mStntax[0][1]:]
 
-	outputType := rOut.FindStringSubmatch(string(header))
-	fmt.Printf("Header:\n%s\n", header)
+	fmt.Printf("Header: %d\n%s\n---\n", len(header), header)
 	fmt.Printf("Payload: %s\n", payload)
-	fmt.Printf("Output: %s\n", outputType[1])
+	fmt.Printf("Output: %s\n", output)
 
 	// open file
 	// readCSV("in.product.csv")
