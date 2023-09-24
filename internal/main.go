@@ -7,17 +7,10 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"regexp"
 	"strings"
 
 	"github.com/alexflint/go-arg"
 )
-
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
 
 func readCSV(filename string) {
 	f, err := os.Open(filename)
@@ -74,7 +67,7 @@ func main() {
 			transfromFile = fmt.Sprintf("%s/%s.tsu", filepath.Dir(f), strings.Replace(filepath.Base(f), filepath.Ext(f), "", -1))
 		}
 
-		header, payload, output := syntaxTsunamiTransfrom(transfromFile)
+		header, payload, output := tsunamiSyntax(transfromFile)
 
 		fmt.Printf("Header: %s\n%s\n---\n", transfromFile, header)
 		fmt.Printf("Payload:\n%s\n---\n", payload)
@@ -83,30 +76,4 @@ func main() {
 		// open file
 		// readCSV("in.product.csv")
 	}
-}
-
-func syntaxTsunamiTransfrom(file string) ([]byte, []byte, []byte) {
-	var header []byte
-
-	output := []byte("application/json")
-	payload, err := os.ReadFile(file)
-	check(err)
-	fmt.Println("------")
-
-	rOut := regexp.MustCompile(`output (.*?)\s`)
-	rSt, _ := regexp.Compile(`---\W`)
-
-	mStntax := rSt.FindAllStringSubmatchIndex(string(payload), -1)
-	if len(mStntax) > 0 {
-		header = payload[0:mStntax[0][0]]
-		payload = payload[mStntax[0][1]:]
-
-		outputType := rOut.FindAllStringSubmatchIndex(string(header), -1)
-		if len(outputType) > 0 {
-			output = header[outputType[0][2]:outputType[0][3]]
-			header = header[outputType[0][1]:]
-		}
-		return header, payload, output
-	}
-	return nil, nil, output
 }
