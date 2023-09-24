@@ -6,7 +6,9 @@ import (
 	"io"
 	"log"
 	"os"
+	"path/filepath"
 	"regexp"
+	"strings"
 
 	"github.com/alexflint/go-arg"
 )
@@ -53,21 +55,41 @@ type OutputType struct {
 	Output string
 }
 
+type InputArgs struct {
+	Output    string   `arg:"-o"`
+	Transfrom string   `arg:"-t"`
+	Input     []string `arg:"positional"`
+}
+
 func main() {
-	var args struct {
-		Output string   `arg:"-o"`
-		Input  []string `arg:"positional"`
-	}
+	var args InputArgs
 	arg.MustParse(&args)
 	fmt.Println("Input:", args.Input)
 	fmt.Println("Output:", args.Output)
-	var (
-		header  []byte
-		payload []byte
-		output  []byte
-	)
 
-	payload, err := os.ReadFile("./example/basic.tsu")
+	for _, f := range args.Input {
+
+		transfromFile := args.Transfrom
+		if transfromFile == "" {
+			transfromFile = fmt.Sprintf("%s/%s.tsu", filepath.Dir(f), strings.Replace(filepath.Base(f), filepath.Ext(f), "", -1))
+		}
+
+		header, payload, output := syntaxTsunamiTransfrom(transfromFile)
+
+		fmt.Printf("Header: %s\n%s\n---\n", transfromFile, header)
+		fmt.Printf("Payload:\n%s\n---\n", payload)
+		fmt.Printf("Output: %s\n", output)
+
+		// open file
+		// readCSV("in.product.csv")
+	}
+}
+
+func syntaxTsunamiTransfrom(file string) ([]byte, []byte, []byte) {
+	var header []byte
+
+	output := []byte("application/json")
+	payload, err := os.ReadFile(file)
 	check(err)
 	fmt.Println("------")
 
@@ -80,14 +102,11 @@ func main() {
 		payload = payload[mStntax[0][1]:]
 
 		outputType := rOut.FindAllStringSubmatchIndex(string(header), -1)
-		output = header[outputType[0][2]:outputType[0][3]]
-		header = header[outputType[0][1]:]
+		if len(outputType) > 0 {
+			output = header[outputType[0][2]:outputType[0][3]]
+			header = header[outputType[0][1]:]
+		}
+		return header, payload, output
 	}
-
-	fmt.Printf("Header: %d\n%s\n---\n", len(header), header)
-	fmt.Printf("Payload: %s\n", payload)
-	fmt.Printf("Output: %s\n", output)
-
-	// open file
-	// readCSV("in.product.csv")
+	return nil, nil, output
 }
