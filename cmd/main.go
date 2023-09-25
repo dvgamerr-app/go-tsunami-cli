@@ -9,8 +9,16 @@ import (
 	"path/filepath"
 	"strings"
 
+	"tsunami"
+
 	"github.com/alexflint/go-arg"
 )
+
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
 
 func readCSV(filename string) {
 	f, err := os.Open(filename)
@@ -64,15 +72,11 @@ func main() {
 
 		transfromFile := args.Transfrom
 		if transfromFile == "" {
-			transfromFile = fmt.Sprintf("%s/%s.tsu", filepath.Dir(f), strings.Replace(filepath.Base(f), filepath.Ext(f), "", -1))
+			transfromFile = fmt.Sprintf("%s/%s", filepath.Dir(f), strings.Replace(filepath.Base(f), filepath.Ext(f), tsunami.ExtFile, -1))
 		}
 
-		header, payload, output := tsunamiSyntax(transfromFile)
-
-		fmt.Printf("Header: %s\n%s\n---\n", transfromFile, header)
-		fmt.Printf("Payload:\n%s\n---\n", payload)
-		fmt.Printf("Output: %s\n", output)
-
+		err := tsunami.PipeFile(transfromFile)
+		check(err)
 		// open file
 		// readCSV("in.product.csv")
 	}

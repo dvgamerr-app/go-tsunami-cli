@@ -1,6 +1,10 @@
 # go-tsunami-cli
 Dataweave is cool but performance is suck.
 
+## Develop
+```shell
+go run internal -o bin/tsunami.exe
+```
 
 ## Benchmark
 ```shell
@@ -13,4 +17,9 @@ go tool pprof -http :8081 bin/mem.out
 go tool trace bin/trace.out
 
 rm -f bin/*.out
+```
+
+##  Tests
+```shell
+go test . -o bin/tsunami.test.exe
 ```
