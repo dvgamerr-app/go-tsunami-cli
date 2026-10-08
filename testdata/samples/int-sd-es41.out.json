@@ -1,0 +1,26 @@
+{
+  "WEB_TRANSACTION_ID": "MSG-1",
+  "ORDER_HEADER_IN": {
+    "DOC_TYPE": "ZOR",
+    "SALES_ORG": "0750",
+    "DISTR_CHAN": "10",
+    "REQ_DATE_H": "2023-05-01",
+    "CURRENCY": "THB"
+  },
+  "ORDER_PARTNERS": [
+    {
+      "PARTN_ROLE": "AG",
+      "PARTN_NUMB": "0001023614"
+    }
+  ],
+  "ORDER_ITEMS_IN": [
+    {
+      "ITM_NUMBER": "000010",
+      "MATERIAL": "Z02",
+      "TARGET_QTY": 10.000,
+      "SALES_UNIT": "ROL",
+      "PLANT": "7502"
+    }
+  ],
+  "ORDER_SCHEDULES_IN": []
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "payload": {
+      "resultSet1": [
+        {
+          "activity_no": "A001",
+          "source_system": "HOFM",
+          "channel_type": "BuyNow",
+          "activity_status": "completed",
+          "created_date": "2023-05-01T10:20:30.123",
+          "updated_date": "",
+          "attribute_object": "{\"order_id\": \"ORD-1\", \"first_item_sku_id\": \"SKU-9\", \"first_item_name\": \"Tile\", \"first_item_price\": \"12.5\", \"first_item_qty\": \"3\", \"recipients_name\": \"Somchai\", \"recipients_tel\": \"0812345678\", \"recipients_email\": null}"
+        },
+        {
+          "activity_no": "A002",
+          "source_system": "QC",
+          "channel_type": "service",
+          "activity_status": "open",
+          "created_date": null,
+          "updated_date": "2023-06-02T01:02:03.000",
+          "attribute_object": "{\"CustomerId\": \"C9\", \"CustomerIdName\": \"Malee\", \"Telephone1\": \"029999999\", \"scg_totallineitemamount\": 1500, \"scg_amountafterdiscountservice\": 1200, \"status_name_th\": \"รอดำเนินการ\"}"
+        },
+        {
+          "activity_no": "A003",
+          "source_system": "HOLN",
+          "channel_type": "unknown-type",
+          "activity_status": "new",
+          "created_date": null,
+          "updated_date": null,
+          "attribute_object": "{}"
+        }
+      ]
+    }
+  },
+  {
+    "payload": {
+      "resultSet1": [
+        {
+          "activity_no": "A002",
+          "attribute_object": "{\"ProductCode\": \"P1\", \"Name\": \"Pipe\", \"PricePerUnit\": 99.999, \"Quantity\": 2.4, \"UnitCode\": \"EA\"}"
+        },
+        {
+          "activity_no": "A002",
+          "attribute_object": "{\"ProductId\": \"P2\", \"ProductIdName\": \"Valve\", \"UnitPrice\": \"10\", \"Quantity\": null, \"Unit\": \"PC\"}"
+        }
+      ]
+    }
+  },
+  {
+    "payload": {
+      "resultSet1": [ { "TOTAL_RECORDS": 3 } ]
+    }
+  }
+]

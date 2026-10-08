@@ -1,0 +1,21 @@
+{
+  "queryParams": {
+    "search": "tile",
+    "search_brand": "",
+    "cat_codes": "A01,B'02",
+    "cat_codes": "C03",
+    "brand_names": "COTTO",
+    "ids": "101,102",
+    "source_channels": "home_online",
+    "source_channels": "xp",
+    "source_channels": "unknown",
+    "order_by": "name:asc",
+    "order_by": "bad",
+    "order_by": "updated_at:DESC",
+    "filters": "color",
+    "filters": "size",
+    "has_null": "cat_codes",
+    "limit": "25",
+    "status": "active"
+  }
+}

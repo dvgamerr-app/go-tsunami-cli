@@ -1,0 +1,19 @@
+{
+  "piMessageId": "MSG-1",
+  "salesdocumentin": null,
+  "orderHeaderIn": {
+    "docType": "ZOR",
+    "salesOrg": "0750",
+    "distributionChannel": "10",
+    "division": null,
+    "requestDate": "2023-05-01",
+    "currency": "THB"
+  },
+  "orderPartners": [
+    { "partnerRole": "AG", "partnerNo": "0001023614", "itemNo": null }
+  ],
+  "orderItemsIn": [
+    { "itemNo": "000010", "material": "Z02", "targetQuantity": 10.000, "salesUnit": "ROL", "plant": "7502" }
+  ],
+  "orderSchedulesIn": []
+}
