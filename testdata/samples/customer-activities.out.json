@@ -1,0 +1,130 @@
+{
+  "limit": 10,
+  "offset": 0,
+  "total": 3,
+  "result": [
+    {
+      "channel": "home_online",
+      "refId": "A001",
+      "type": "BuyNow",
+      "subject": {
+        "refFMSId": [
+          "ORD-1"
+        ],
+        "products": [
+          {
+            "id": "SKU-9",
+            "name": "Tile",
+            "pricePerUnit": 12.5,
+            "quantity": 3,
+            "unit": null
+          }
+        ],
+        "customer": {
+          "name": "Somchai",
+          "mobileNo": "0812345678",
+          "email": null
+        }
+      },
+      "status": "completed",
+      "createDate": "2023-05-01T10:20:30.123Z",
+      "updateDate": null,
+      "PROC_NCC_HEADER_PHONE": {
+        "order_id": "ORD-1",
+        "first_item_sku_id": "SKU-9",
+        "first_item_name": "Tile",
+        "first_item_price": "12.5",
+        "first_item_qty": "3",
+        "recipients_name": "Somchai",
+        "recipients_tel": "0812345678",
+        "recipients_email": null
+      },
+      "PROC_NCC_DETAIL_PHONE": []
+    },
+    {
+      "channel": "q_chang",
+      "refId": "A002",
+      "type": "service",
+      "subject": {
+        "products": [
+          {
+            "id": "P1",
+            "name": "Pipe",
+            "pricePerUnit": 100.00,
+            "quantity": 2,
+            "unit": "EA"
+          },
+          {
+            "id": "P2",
+            "name": "Valve",
+            "pricePerUnit": 10,
+            "quantity": 0,
+            "unit": "PC"
+          }
+        ],
+        "customer": {
+          "customerID": "C9",
+          "name": "Malee",
+          "email": null,
+          "mobileNo": "029999999",
+          "address": {
+            "name": null,
+            "mobileNo": "029999999",
+            "address": null,
+            "subDistrict": null,
+            "district": null,
+            "province": null,
+            "zipcode": null
+          }
+        },
+        "dealer": {
+          "name": null,
+          "isrName": null,
+          "code": null
+        },
+        "netAmount": 1500.00,
+        "discount": 1500.00
+      },
+      "status": "รอดำเนินการ",
+      "createDate": null,
+      "updateDate": "2023-06-02T01:02:03Z",
+      "PROC_NCC_HEADER_PHONE": {
+        "CustomerId": "C9",
+        "CustomerIdName": "Malee",
+        "Telephone1": "029999999",
+        "scg_totallineitemamount": 1500,
+        "scg_amountafterdiscountservice": 1200,
+        "status_name_th": "รอดำเนินการ"
+      },
+      "PROC_NCC_DETAIL_PHONE": [
+        {
+          "ProductCode": "P1",
+          "Name": "Pipe",
+          "PricePerUnit": 99.999,
+          "Quantity": 2.4,
+          "UnitCode": "EA"
+        },
+        {
+          "ProductId": "P2",
+          "ProductIdName": "Valve",
+          "UnitPrice": "10",
+          "Quantity": null,
+          "Unit": "PC"
+        }
+      ]
+    },
+    {
+      "channel": "home_online",
+      "refId": "A003",
+      "type": "unknown-type",
+      "subject": {
+        "error": "unknow type 'unknown-type'"
+      },
+      "status": "new",
+      "createDate": null,
+      "updateDate": null,
+      "PROC_NCC_HEADER_PHONE": {},
+      "PROC_NCC_DETAIL_PHONE": []
+    }
+  ]
+}

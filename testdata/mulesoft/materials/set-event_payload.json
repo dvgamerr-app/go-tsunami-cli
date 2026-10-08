@@ -1,0 +1,232 @@
+{
+  "piMessageId": "SXQ_f70b8c9df0c51eed9899dc557c9a0000",
+  "data": {
+    "materialCode": "Z02CAV125M1080117N",
+    "materialGroup": "TG00",
+    "materialDescTh": "CAV 125M-108 DIA117N",
+    "materialDescEn": "CAV 125M-108 DIA117N",
+    "materialType": "82",
+    "materialTypeDesc": "Trading Goods",
+    "baseUnit": "KG",
+    "baseUnitDesc": "Kilogram",
+    "netWeight": 0.001,
+    "grossWeight": 0.001,
+    "weightUnit": "TON",
+    "sales": [
+      {
+        "saleOrg": "0750",
+        "distributionChannel": "10",
+        "salesUnit": "ROL",
+        "taxClass1": "1",
+        "taxClass1Desc": "Full tax",
+        "materialGroup1": "K01",
+        "materialGroup1Desc": "SKIC Roll",
+        "deliveryPlant": "7533",
+        "deliveryPlantDesc": "[SD] SKICBP Wangsala (Purc)",
+        "productHierarchy": "0212CM CAV125",
+        "productHierarchyDesc": "CAV 125",
+        "productHierarchy1": "02",
+        "productHierarchy1Desc": "  Business Roll Paper",
+        "productHierarchy2": "0212",
+        "productHierarchy2Desc": "SKIC Roll ( Import )",
+        "productHierarchy3": "0212CM",
+        "productHierarchy3Desc": "CM",
+        "productHierarchy4": "0212CM CAV",
+        "productHierarchy4Desc": "CAV",
+        "productHierarchy5": "0212CM CAV125",
+        "productHierarchy5Desc": "CAV 125",
+        "productHierarchy6": "0212CM CAV125",
+        "productHierarchy6Desc": "CAV 125",
+        "materialPriceGroup": "02",
+        "materialPriceGroupDesc": "PP:NonStdSize",
+        "itemCatGroup": "NORM",
+        "itemCatGroupDesc": "Standard item",
+        "status": "Active",
+        "acctAssignmentGrpMat": "01"
+      },
+      {
+        "saleOrg": "0750",
+        "distributionChannel": "20",
+        "salesUnit": "ROL",
+        "taxClass1": "1",
+        "taxClass1Desc": "Full tax",
+        "materialGroup1": "K01",
+        "materialGroup1Desc": "SKIC Roll",
+        "deliveryPlant": "7533",
+        "deliveryPlantDesc": "[SD] SKICBP Wangsala (Purc)",
+        "productHierarchy": "0212CM CAV125",
+        "productHierarchyDesc": "CAV 125",
+        "productHierarchy1": "02",
+        "productHierarchy1Desc": "  Business Roll Paper",
+        "productHierarchy2": "0212",
+        "productHierarchy2Desc": "SKIC Roll ( Import )",
+        "productHierarchy3": "0212CM",
+        "productHierarchy3Desc": "CM",
+        "productHierarchy4": "0212CM CAV",
+        "productHierarchy4Desc": "CAV",
+        "productHierarchy5": "0212CM CAV125",
+        "productHierarchy5Desc": "CAV 125",
+        "productHierarchy6": "0212CM CAV125",
+        "productHierarchy6Desc": "CAV 125",
+        "materialPriceGroup": "02",
+        "materialPriceGroupDesc": "PP:NonStdSize",
+        "itemCatGroup": "NORM",
+        "itemCatGroupDesc": "Standard item",
+        "status": "Active",
+        "acctAssignmentGrpMat": "01"
+      }
+    ],
+    "purchasings": [
+      {
+        "plant": "7531",
+        "plantName": "[SD] SKICBP Banpong (Purc)",
+        "purchaseGroup": "C03",
+        "purchaseGroupDesc": "Ekapod C.",
+        "orderUnit": "TON"
+      },
+      {
+        "plant": "7533",
+        "plantName": "[SD] SKICBP Wangsala (Purc)",
+        "purchaseGroup": "C03",
+        "purchaseGroupDesc": "Ekapod C.",
+        "orderUnit": "TON"
+      },
+      {
+        "plant": "7546",
+        "plantName": "[SD] SKICBP ESC LCB",
+        "purchaseGroup": "C03",
+        "purchaseGroupDesc": "Ekapod C.",
+        "orderUnit": "TON"
+      }
+    ],
+    "plantStorages": [
+      {
+        "plant": "7531",
+        "sloc": "1",
+        "slocDesc": "Common BP1",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "C1",
+        "slocDesc": "Outsource-TPC",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "E1",
+        "slocDesc": "Outsource-Elite",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "O1",
+        "slocDesc": "Outsource-Other",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "R2",
+        "slocDesc": "Outsource-RT",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "S1",
+        "slocDesc": "Outsource-SR",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "T16",
+        "slocDesc": "Outsource-Tent16",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "T2",
+        "slocDesc": "Outsource-TPM",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "U1",
+        "slocDesc": "Outsource-TCPPB",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7531",
+        "sloc": "U2",
+        "slocDesc": "Outsource-UTP",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "1",
+        "slocDesc": "SKIC WS1",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "3",
+        "slocDesc": "SKIC WS3",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "4",
+        "slocDesc": "SKIC WS4",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "5",
+        "slocDesc": "SKIC WS5",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "6",
+        "slocDesc": "SKIC WS6",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "7",
+        "slocDesc": "SKIC WS7",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "A1",
+        "slocDesc": "SKIC Asia-STO",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "T1",
+        "slocDesc": "SKIC TCP1-STO",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7533",
+        "sloc": "U1",
+        "slocDesc": "OEM-UTP-WS",
+        "unitIssue": "TON"
+      },
+      {
+        "plant": "7546",
+        "sloc": "1",
+        "slocDesc": "SKIC ESC-OS 1",
+        "unitIssue": "TON"
+      }
+    ],
+    "materialClass": {
+      "grade": "CAV",
+      "basisWeight": "125",
+      "rollWidth": "108.00 cm",
+      "diameter": "117.0 cm",
+      "coreSize": "3.000 in"
+    }
+  }
+}

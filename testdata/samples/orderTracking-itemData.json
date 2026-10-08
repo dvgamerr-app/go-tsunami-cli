@@ -1,0 +1,70 @@
+{
+  "delHeaderData": {
+    "data": [
+      {
+        "dpNo": "0413970930",
+        "shipTo": "0001022194",
+        "soldTo": "0001012115",
+        "piNumber": "0410089666",
+        "cutOffDate": "2023-04-26",
+        "cutOffTime": "17:34:36",
+        "giTime": "18:05:57"
+      },
+      {
+        "dpNo": "0413970931",
+        "shipTo": "0001022195",
+        "soldTo": "0001012116",
+        "piNumber": "0410089667",
+        "cutOffDate": "2023-04-27",
+        "cutOffTime": "10:00:00",
+        "giTime": null
+      }
+    ]
+  },
+  "delItemData": {
+    "itemData": [
+      {
+        "delivery": "0413970930",
+        "deliveryItem": "000010",
+        "matNumber": "Z02CA-125D1030117N",
+        "deliveryQty": 2,
+        "saleUnit": "ROL",
+        "dueDate": "2023-04-27",
+        "matDes": "CA- 125D-103 DIA117N",
+        "soNo": "0411095254",
+        "itemNo": "000010",
+        "matGroup1": "K01",
+        "shipment": "0114269783",
+        "truckNo": "VPTK705610",
+        "poNo": "LMS-4"
+      },
+      {
+        "delivery": "0413970931",
+        "deliveryItem": "000020",
+        "matNumber": "Z02CA-125D1080117N",
+        "deliveryQty": 3.50,
+        "saleUnit": "ROL",
+        "dueDate": "2023-04-28",
+        "matDes": "CA- 125D-108 DIA117N",
+        "soNo": "0411095255",
+        "itemNo": "000020",
+        "matGroup1": "K02",
+        "shipment": "0114269784",
+        "truckNo": "VPTK705611",
+        "poNo": "LMS-5"
+      }
+    ]
+  },
+  "partnerData": {
+    "data": [
+      { "delItem": "0413970930", "shipTo": "0001022194", "partnerFunction": "WE", "addCode": "A1" },
+      { "delItem": "0413970931", "shipTo": "0001022195", "partnerFunction": "WE", "addCode": "A2" }
+    ]
+  },
+  "addressList": {
+    "address": [
+      { "addNo": "A1", "shipToName": "Thai Container Khon Kaen" },
+      { "addNo": "A2", "shipToName": "Siam Kraft Ratchaburi" }
+    ]
+  }
+}

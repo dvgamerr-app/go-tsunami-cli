@@ -1,0 +1,10 @@
+{
+  "search": "%bang%",
+  "name": null,
+  "channels": "lower('HOFM'),lower('HOLN')",
+  "area_names": "",
+  "province_names": "lower('bangkok')",
+  "order_by": "UPDATED_DT:desc, BP_ID:asc",
+  "offset": 20,
+  "limit": 10
+}

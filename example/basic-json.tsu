@@ -1,8 +1,9 @@
 output application/json
 ---
-payload map(e)-> {
-  id: int(e.EMPLOYEE_ID)
-  hire: e.HIRE_DATE toDate '' format ''
-  job: float(e.JOB_ID)
-  salary: int(e.SALARY)
+payload map (e) -> {
+  id: e.EMPLOYEE_ID as Number,
+  name: e.FIRST_NAME ++ " " ++ e.LAST_NAME,
+  hire: e.HIRE_DATE as Date {format: "dd-MMM-yy"},
+  job: e.JOB_ID,
+  salary: e.SALARY as Number
 }

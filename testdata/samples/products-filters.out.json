@@ -1,0 +1,46 @@
+[
+  {
+    "id": "C01",
+    "typeCode": "COLOR",
+    "type": "color",
+    "name": "Color",
+    "children": [
+      {
+        "id": "แดง",
+        "nameEN": "Red",
+        "nameTH": "แดง"
+      },
+      {
+        "id": "น้ำเงิน",
+        "nameEN": "Blue",
+        "nameTH": "น้ำเงิน"
+      }
+    ]
+  },
+  {
+    "id": "C01",
+    "typeCode": "SIZE",
+    "type": "size",
+    "name": "Size",
+    "children": [
+      {
+        "id": "30x30",
+        "nameEN": null,
+        "nameTH": "30x30"
+      }
+    ]
+  },
+  {
+    "id": "C02",
+    "typeCode": "COLOR",
+    "type": "color",
+    "name": null,
+    "children": [
+      {
+        "id": null,
+        "nameEN": "White",
+        "nameTH": null
+      }
+    ]
+  }
+]

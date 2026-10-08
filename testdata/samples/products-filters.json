@@ -1,0 +1,6 @@
+[
+  { "id": "C01", "typeCode": "COLOR", "type": "color", "nameEN": "Color", "nameTH": "สี", "childNameEN": "Red", "childNameTH": "แดง" },
+  { "id": "C01", "typeCode": "COLOR", "type": "color", "nameEN": "Color", "nameTH": "สี", "childNameEN": "Blue", "childNameTH": "น้ำเงิน" },
+  { "id": "C01", "typeCode": "SIZE", "type": "size", "nameEN": "Size", "nameTH": "ขนาด", "childNameEN": "", "childNameTH": "30x30" },
+  { "id": "C02", "typeCode": "COLOR", "type": "color", "nameEN": "", "nameTH": null, "childNameEN": "White", "childNameTH": null }
+]

@@ -1,0 +1,80 @@
+{
+  "limit": 10,
+  "offset": 0,
+  "total": 2,
+  "results": [
+    {
+      "refId": "S001",
+      "channel": "home_online",
+      "name": "Home Mart Rama 2",
+      "bpId": null,
+      "status": "active",
+      "address": {
+        "address": "99 Rama 2 Rd",
+        "subDistrict": "Samae Dam",
+        "postCode": "10150",
+        "district": null,
+        "province": "Bangkok",
+        "region": "Central"
+      },
+      "openingHours": "08:00-20:00",
+      "openingHoursSpecial": null,
+      "noteStatus": null,
+      "secondaryStore": null,
+      "phones": [
+        {
+          "number": "021234567",
+          "numberExt": null
+        },
+        {
+          "number": "029876543",
+          "numberExt": null
+        }
+      ],
+      "mapUrl": "https://maps.example/s001",
+      "mapFileUrl": null,
+      "directionTip": null,
+      "product": null,
+      "categories": [],
+      "contact": null,
+      "saleAreaCode": null,
+      "saleGroupCode": null,
+      "customerGroupCode": null,
+      "customerGroupName": null,
+      "createdAt": "2023-01-02T03:04:05.000Z",
+      "updatedAt": "2023-02-03T04:05:06.000Z"
+    },
+    {
+      "refId": "S002",
+      "channel": null,
+      "name": "Dealer",
+      "bpId": null,
+      "status": null,
+      "address": {
+        "address": null,
+        "subDistrict": null,
+        "postCode": null,
+        "district": null,
+        "province": null,
+        "region": null
+      },
+      "openingHours": null,
+      "openingHoursSpecial": null,
+      "noteStatus": null,
+      "secondaryStore": null,
+      "phones": [],
+      "mapUrl": null,
+      "mapFileUrl": null,
+      "directionTip": null,
+      "product": null,
+      "categories": [],
+      "contact": null,
+      "saleAreaCode": null,
+      "saleGroupCode": null,
+      "customerGroupCode": null,
+      "customerGroupName": null,
+      "createdAt": null,
+      "updatedAt": null
+    }
+  ]
+}
